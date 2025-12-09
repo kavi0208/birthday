@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preview Image Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Cinzel:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 40px;
+            background: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        .instructions {
+            max-width: 1200px;
+            margin: 0 auto 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+        }
+
+        .instructions h2 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        .instructions ol {
+            line-height: 1.8;
+        }
+
+        /* Preview card - exactly 1200x630 for WhatsApp */
+        .preview-card {
+            width: 1200px;
+            height: 630px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        /* Golden sparkles */
+        .sparkle {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: radial-gradient(circle, #f4d03f 0%, transparent 70%);
+            border-radius: 50%;
+            opacity: 0.6;
+        }
+
+        .content {
+            position: relative;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            padding: 60px;
+            text-align: center;
+        }
+
+        .champagne {
+            font-size: 100px;
+            margin-bottom: 30px;
+            filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.5));
+        }
+
+        .main-title {
+            font-family: 'Cinzel', serif;
+            font-size: 72px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #f4d03f 0%, #d4af37 50%, #c5a028 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+            letter-spacing: 6px;
+        }
+
+        .subtitle {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            color: #d4af37;
+            margin-bottom: 40px;
+            font-weight: 700;
+        }
+
+        .divider {
+            width: 300px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent 0%, #d4af37 50%, transparent 100%);
+            margin: 30px auto;
+        }
+
+        .details {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 32px;
+            color: #ccc;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .details strong {
+            color: #f4d03f;
+            font-weight: 600;
+        }
+
+        .call-to-action {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            color: #999;
+            margin-top: 30px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .border-top {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, transparent 0%, #d4af37 20%, #f4d03f 50%, #d4af37 80%, transparent 100%);
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+        }
+
+        .border-bottom {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, transparent 0%, #d4af37 20%, #f4d03f 50%, #d4af37 80%, transparent 100%);
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="instructions">
+        <h2>📸 How to Create Your WhatsApp Preview Image</h2>
+        <ol>
+            <li><strong>Screenshot this card:</strong> Use your computer's screenshot tool to capture the card below</li>
+            <li><strong>Save as preview.jpg:</strong> Save the screenshot as "preview.jpg"</li>
+            <li><strong>Upload to server:</strong> Copy it to /var/www/html/birthday/preview.jpg</li>
+            <li><strong>Update invitation.html:</strong> Replace "https://yourwebsite.com" with your actual URL</li>
+            <li><strong>Test:</strong> Use Facebook's Sharing Debugger to preview how it will look</li>
+        </ol>
+        <p><strong>Tip:</strong> The card below is exactly 1200x630 pixels - the optimal size for WhatsApp previews!</p>
+    </div>
+
+    <div class="preview-card">
+        <div class="border-top"></div>
+
+        <!-- Sparkles -->
+        <div class="sparkle" style="top: 10%; left: 15%;"></div>
+        <div class="sparkle" style="top: 20%; right: 20%;"></div>
+        <div class="sparkle" style="top: 60%; left: 10%;"></div>
+        <div class="sparkle" style="top: 70%; right: 15%;"></div>
+        <div class="sparkle" style="top: 30%; left: 25%;"></div>
+        <div class="sparkle" style="top: 50%; right: 30%;"></div>
+        <div class="sparkle" style="top: 80%; left: 50%;"></div>
+        <div class="sparkle" style="top: 15%; right: 40%;"></div>
+
+        <div class="content">
+            <div class="champagne">🥂</div>
+
+            <div class="main-title">75th</div>
+            <div class="subtitle">Birthday Celebration</div>
+
+            <div class="divider"></div>
+
+            <div class="details">
+                <strong>Mr Neerunjun Daboo</strong>
+            </div>
+
+            <div class="details">
+                27 December 2025 • 11:00-16:00
+            </div>
+
+            <div class="details">
+                Quatre-Bornes @Kavi & Lauri house
+            </div>
+
+            <div class="call-to-action">
+                Click to RSVP
+            </div>
+        </div>
+
+        <div class="border-bottom"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You're Invited! Mr Neerunjun Daboo's 75th Birthday Celebration</title>
+
+    <!-- Open Graph / Facebook / WhatsApp Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gw-hillside.ddns.net/invitation.html">
+    <meta property="og:title" content="🥂 You're Invited to Mr Neerunjun Daboo's 75th Birthday! 🥂">
+    <meta property="og:description" content="Join us in celebrating a special milestone! 27 December 2025, 11:00-16:00 at Quatre-Bornes. Click to RSVP.">
+    <meta property="og:image" content="https://gw-hillside.ddns.net/preview.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://gw-hillside.ddns.net/invitation.html">
+    <meta name="twitter:title" content="🥂 You're Invited to Mr Neerunjun Daboo's 75th Birthday! 🥂">
+    <meta name="twitter:description" content="Join us in celebrating a special milestone! 27 December 2025, 11:00-16:00 at Quatre-Bornes. Click to RSVP.">
+    <meta name="twitter:image" content="https://gw-hillside.ddns.net/preview.jpg">
+
+    <!-- Additional Meta Tags -->
+    <meta name="description" content="Join us in celebrating Mr Neerunjun Daboo's 75th Birthday on 27 December 2025">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&family=Great+Vibes&family=Cinzel:wght@400;500;600;700;800&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: #000000;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        /* Bokeh light effects */
+        .bokeh-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .bokeh {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.4) 0%, rgba(212, 175, 55, 0.1) 40%, transparent 70%);
+            filter: blur(3px);
+            animation: float 20s infinite ease-in-out;
+        }
+
+        .bokeh:nth-child(1) {
+            width: 150px;
+            height: 150px;
+            top: 10%;
+            left: 10%;
+            animation-delay: 0s;
+            animation-duration: 25s;
+        }
+
+        .bokeh:nth-child(2) {
+            width: 200px;
+            height: 200px;
+            top: 60%;
+            right: 15%;
+            animation-delay: 3s;
+            animation-duration: 30s;
+        }
+
+        .bokeh:nth-child(3) {
+            width: 120px;
+            height: 120px;
+            bottom: 15%;
+            left: 20%;
+            animation-delay: 6s;
+            animation-duration: 22s;
+        }
+
+        .bokeh:nth-child(4) {
+            width: 180px;
+            height: 180px;
+            top: 30%;
+            right: 10%;
+            animation-delay: 9s;
+            animation-duration: 28s;
+        }
+
+        .bokeh:nth-child(5) {
+            width: 140px;
+            height: 140px;
+            bottom: 30%;
+            right: 30%;
+            animation-delay: 12s;
+            animation-duration: 26s;
+        }
+
+        .bokeh:nth-child(6) {
+            width: 100px;
+            height: 100px;
+            top: 50%;
+            left: 5%;
+            animation-delay: 15s;
+            animation-duration: 24s;
+        }
+
+        /* Golden sparkle particles */
+        .sparkles-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        .sparkle {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: radial-gradient(circle, #f4d03f, rgba(212, 175, 55, 0.5));
+            border-radius: 50%;
+            box-shadow: 0 0 6px #f4d03f;
+            animation: floatSparkle 8s infinite ease-in-out;
+        }
+
+        @keyframes floatSparkle {
+            0%, 100% {
+                transform: translate(0, 0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translate(var(--tx), var(--ty));
+                opacity: 0;
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translate(0, 0) scale(1);
+                opacity: 0.3;
+            }
+            25% {
+                transform: translate(30px, -30px) scale(1.1);
+                opacity: 0.5;
+            }
+            50% {
+                transform: translate(-20px, 30px) scale(0.9);
+                opacity: 0.4;
+            }
+            75% {
+                transform: translate(20px, 20px) scale(1.05);
+                opacity: 0.6;
+            }
+        }
+
+        .invitation-card {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            max-width: 600px;
+            width: 100%;
+            box-shadow:
+                0 0 80px rgba(212, 175, 55, 0.3),
+                0 20px 60px rgba(0, 0, 0, 0.8);
+            overflow: hidden;
+            animation: fadeIn 1.2s ease-out;
+            position: relative;
+            z-index: 1;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            margin: 20px auto;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Gold decorative border */
+        .gold-border-top {
+            height: 3px;
+            background: linear-gradient(90deg,
+                transparent 0%,
+                #d4af37 20%,
+                #f4d03f 50%,
+                #d4af37 80%,
+                transparent 100%);
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+        }
+
+        /* Champagne toast header */
+        .champagne-header {
+            position: relative;
+            width: 100%;
+            height: 180px;
+            background: linear-gradient(135deg, #1a1a2e 0%, #0a0a0a 100%);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .champagne-toast-svg {
+            position: relative;
+            z-index: 2;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .header-sparkles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+
+        .header-sparkle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: radial-gradient(circle, #f4d03f, rgba(212, 175, 55, 0.3));
+            border-radius: 50%;
+            box-shadow: 0 0 8px #f4d03f;
+            animation: twinkle 2s infinite ease-in-out;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; transform: scale(0.8); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+
+        .champagne-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, transparent 0%, rgba(10, 10, 10, 0.8) 100%);
+        }
+
+        .card-inner {
+            padding: 35px 35px 30px;
+            position: relative;
+        }
+
+        /* Decorative corner elements */
+        .corner-decoration {
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            border-style: solid;
+            border-color: rgba(212, 175, 55, 0.3);
+        }
+
+        .corner-top-left {
+            top: 15px;
+            left: 15px;
+            border-width: 2px 0 0 2px;
+        }
+
+        .corner-top-right {
+            top: 15px;
+            right: 15px;
+            border-width: 2px 2px 0 0;
+        }
+
+        .corner-bottom-left {
+            bottom: 15px;
+            left: 15px;
+            border-width: 0 0 2px 2px;
+        }
+
+        .corner-bottom-right {
+            bottom: 15px;
+            right: 15px;
+            border-width: 0 2px 2px 0;
+        }
+
+        .celebration-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .celebration-header .subtitle-top {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.85em;
+            color: #d4af37;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+
+        .main-number {
+            font-family: 'Cinzel', serif;
+            font-size: 5em;
+            font-weight: 900;
+            background: linear-gradient(135deg, #f4d03f 0%, #d4af37 50%, #c5a028 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 30px rgba(212, 175, 55, 0.5);
+            line-height: 1;
+            margin: 15px 0;
+            letter-spacing: 8px;
+        }
+
+        .years-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6em;
+            color: #d4af37;
+            font-weight: 400;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+        }
+
+        .divider {
+            width: 150px;
+            height: 1px;
+            background: linear-gradient(90deg,
+                transparent 0%,
+                #d4af37 50%,
+                transparent 100%);
+            margin: 25px auto;
+        }
+
+        .invitation-title {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.5em;
+            color: #d4af37;
+            text-align: center;
+            margin-bottom: 15px;
+            text-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+        }
+
+        .invitation-subtitle {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.95em;
+            color: #999;
+            text-align: center;
+            line-height: 1.7;
+            margin-bottom: 30px;
+            letter-spacing: 0.5px;
+            font-weight: 300;
+        }
+
+        .event-details {
+            background: rgba(212, 175, 55, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-left: 3px solid #d4af37;
+            border-right: 3px solid #d4af37;
+            padding: 25px 30px;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .detail-row {
+            display: flex;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .detail-row:last-child {
+            border-bottom: none;
+        }
+
+        .detail-icon {
+            font-size: 1.3em;
+            color: #d4af37;
+            margin-right: 20px;
+            min-width: 25px;
+            text-align: center;
+        }
+
+        .detail-label {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8em;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 600;
+            min-width: 120px;
+        }
+
+        .detail-value {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15em;
+            color: #d4af37;
+            font-weight: 500;
+        }
+
+        .location-link {
+            color: #d4af37;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
+            display: inline-block;
+        }
+
+        .location-link:hover {
+            color: #f4d03f;
+            border-bottom: 1px solid #f4d03f;
+            transform: translateY(-1px);
+        }
+
+        .location-note {
+            font-size: 0.65em;
+            color: #888;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+            margin-top: 3px;
+            font-style: italic;
+            letter-spacing: 0.5px;
+        }
+
+        .rsvp-section {
+            text-align: center;
+            padding: 30px 25px;
+            background: rgba(0, 0, 0, 0.5);
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            position: relative;
+            margin-top: 0;
+        }
+
+        .rsvp-section::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 1px;
+            background: linear-gradient(90deg,
+                transparent 0%,
+                #d4af37 50%,
+                transparent 100%);
+        }
+
+        .rsvp-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1em;
+            color: #d4af37;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .rsvp-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(135deg, #d4af37 0%, #c5a028 100%);
+            color: #000000;
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1em;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border: 2px solid #f4d03f;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+        }
+
+        .rsvp-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .rsvp-button:hover::before {
+            left: 100%;
+        }
+
+        .rsvp-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 30px rgba(212, 175, 55, 0.6);
+            background: linear-gradient(135deg, #f4d03f 0%, #d4af37 100%);
+        }
+
+        .rsvp-button:active {
+            transform: translateY(-1px);
+        }
+
+        .rsvp-instruction {
+            margin-top: 15px;
+            color: #999;
+            font-size: 0.85em;
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 0.5px;
+        }
+
+        .footer-message {
+            text-align: center;
+            padding: 25px 35px 30px;
+            color: #888;
+            font-size: 0.9em;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            letter-spacing: 0.5px;
+        }
+
+        .gold-border-bottom {
+            height: 3px;
+            background: linear-gradient(90deg,
+                transparent 0%,
+                #d4af37 20%,
+                #f4d03f 50%,
+                #d4af37 80%,
+                transparent 100%);
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+        }
+
+
+        @media print {
+            body {
+                background: #000;
+            }
+
+            .bokeh-container,
+            .sparkles-container {
+                display: none;
+            }
+
+            .invitation-card {
+                box-shadow: none;
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .champagne-header {
+                height: 150px;
+            }
+
+            .card-inner {
+                padding: 25px 25px 20px;
+            }
+
+            .main-number {
+                font-size: 4em;
+            }
+
+            .years-text {
+                font-size: 1.4em;
+            }
+
+            .invitation-title {
+                font-size: 2.2em;
+            }
+
+            .event-details {
+                padding: 20px 20px;
+            }
+
+            .detail-row {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 15px 0;
+            }
+
+            .detail-icon {
+                margin-bottom: 8px;
+            }
+
+            .detail-label {
+                min-width: auto;
+                margin-bottom: 5px;
+                font-size: 0.75em;
+            }
+
+            .detail-value {
+                font-size: 1.1em;
+            }
+
+            .corner-decoration {
+                width: 50px;
+                height: 50px;
+            }
+
+            .corner-top-left,
+            .corner-top-right {
+                top: 10px;
+            }
+
+            .corner-bottom-left,
+            .corner-bottom-right {
+                bottom: 10px;
+            }
+
+            .corner-top-left,
+            .corner-bottom-left {
+                left: 10px;
+            }
+
+            .corner-top-right,
+            .corner-bottom-right {
+                right: 10px;
+            }
+
+            .footer-message {
+                padding: 20px 25px 25px;
+                font-size: 0.85em;
+            }
+
+            .champagne-toast-svg {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .rsvp-title {
+                font-size: 1em;
+            }
+
+            .rsvp-button {
+                padding: 12px 30px;
+                font-size: 0.95em;
+            }
+
+            .rsvp-section {
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .champagne-header {
+                height: 130px;
+            }
+
+            .champagne-toast-svg {
+                width: 100%;
+                max-width: 250px;
+            }
+
+            .card-inner {
+                padding: 20px 18px;
+            }
+
+            .main-number {
+                font-size: 3.5em;
+            }
+
+            .years-text {
+                font-size: 1.3em;
+            }
+
+            .invitation-title {
+                font-size: 2em;
+            }
+
+            .invitation-subtitle {
+                font-size: 0.9em;
+            }
+
+            .celebration-header .subtitle-top {
+                font-size: 0.75em;
+                letter-spacing: 2px;
+            }
+
+            .event-details {
+                padding: 18px 15px;
+            }
+
+            .rsvp-section {
+                padding: 18px 15px;
+            }
+
+            .rsvp-button {
+                padding: 12px 25px;
+                font-size: 0.9em;
+                letter-spacing: 1.5px;
+            }
+
+            .footer-message {
+                padding: 18px 20px 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Bokeh light effects -->
+    <div class="bokeh-container">
+        <div class="bokeh"></div>
+        <div class="bokeh"></div>
+        <div class="bokeh"></div>
+        <div class="bokeh"></div>
+        <div class="bokeh"></div>
+        <div class="bokeh"></div>
+    </div>
+
+    <!-- Golden sparkles -->
+    <div class="sparkles-container" id="sparklesContainer"></div>
+
+    <div class="invitation-card">
+        <div class="gold-border-top"></div>
+
+        <!-- Champagne toast header -->
+        <div class="champagne-header">
+            <div class="header-sparkles" id="headerSparkles"></div>
+
+            <svg class="champagne-toast-svg" width="400" height="220" viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="glassGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.3" />
+                        <stop offset="50%" style="stop-color:#f4d03f;stop-opacity:0.2" />
+                        <stop offset="100%" style="stop-color:#d4af37;stop-opacity:0.3" />
+                    </linearGradient>
+                    <linearGradient id="liquidGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" style="stop-color:#f4d03f;stop-opacity:0.9" />
+                        <stop offset="100%" style="stop-color:#d4af37;stop-opacity:1" />
+                    </linearGradient>
+                    <filter id="glow">
+                        <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+                        <feMerge>
+                            <feMergeNode in="coloredBlur"/>
+                            <feMergeNode in="SourceGraphic"/>
+                        </feMerge>
+                    </filter>
+                </defs>
+
+                <!-- Left champagne glass -->
+                <g transform="translate(80, 50) rotate(-15)">
+                    <!-- Glass bowl -->
+                    <path d="M 30 30 L 25 100 L 55 100 L 50 30 Z"
+                          fill="url(#glassGradient)"
+                          stroke="#f4d03f"
+                          stroke-width="2"
+                          opacity="0.6"
+                          filter="url(#glow)"/>
+
+                    <!-- Champagne liquid -->
+                    <path d="M 28 65 L 26 95 L 54 95 L 52 65 Z"
+                          fill="url(#liquidGradient)"
+                          opacity="0.8"/>
+
+                    <!-- Glass rim -->
+                    <ellipse cx="40" cy="30" rx="10" ry="4"
+                             fill="none"
+                             stroke="#f4d03f"
+                             stroke-width="2.5"
+                             filter="url(#glow)"/>
+
+                    <!-- Stem -->
+                    <rect x="37" y="100" width="6" height="40"
+                          fill="url(#glassGradient)"
+                          stroke="#d4af37"
+                          stroke-width="1.5"/>
+
+                    <!-- Base -->
+                    <ellipse cx="40" cy="145" rx="18" ry="5"
+                             fill="url(#glassGradient)"
+                             stroke="#d4af37"
+                             stroke-width="1.5"/>
+
+                    <!-- Bubbles -->
+                    <circle cx="35" cy="80" r="2" fill="#f4d03f" opacity="0.7">
+                        <animate attributeName="cy" values="80;45;80" dur="3s" repeatCount="indefinite"/>
+                        <animate attributeName="opacity" values="0.7;1;0.7" dur="3s" repeatCount="indefinite"/>
+                    </circle>
+                    <circle cx="40" cy="85" r="1.5" fill="#f4d03f" opacity="0.7">
+                        <animate attributeName="cy" values="85;50;85" dur="2.5s" repeatCount="indefinite"/>
+                        <animate attributeName="opacity" values="0.7;1;0.7" dur="2.5s" repeatCount="indefinite"/>
+                    </circle>
+                    <circle cx="45" cy="75" r="2" fill="#f4d03f" opacity="0.7">
+                        <animate attributeName="cy" values="75;40;75" dur="2.8s" repeatCount="indefinite"/>
+                        <animate attributeName="opacity" values="0.7;1;0.7" dur="2.8s" repeatCount="indefinite"/>
+                    </circle>
+                </g>
+
+                <!-- Right champagne glass -->
+                <g transform="translate(320, 50) rotate(15)">
+                    <!-- Glass bowl -->
+                    <path d="M 30 30 L 25 100 L 55 100 L 50 30 Z"
+                          fill="url(#glassGradient)"
+                          stroke="#f4d03f"
+                          stroke-width="2"
+                          opacity="0.6"
+                          filter="url(#glow)"/>
+
+                    <!-- Champagne liquid -->
+                    <path d="M 28 65 L 26 95 L 54 95 L 52 65 Z"
+                          fill="url(#liquidGradient)"
+                          opacity="0.8"/>
+
+                    <!-- Glass rim -->
+                    <ellipse cx="40" cy="30" rx="10" ry="4"
+                             fill="none"
+                             stroke="#f4d03f"
+                             stroke-width="2.5"
+                             filter="url(#glow)"/>
+
+                    <!-- Stem -->
+                    <rect x="37" y="100" width="6" height="40"
+                          fill="url(#glassGradient)"
+                          stroke="#d4af37"
+                          stroke-width="1.5"/>
+
+                    <!-- Base -->
+                    <ellipse cx="40" cy="145" rx="18" ry="5"
+                             fill="url(#glassGradient)"
+                             stroke="#d4af37"
+                             stroke-width="1.5"/>
+
+                    <!-- Bubbles -->
+                    <circle cx="35" cy="80" r="2" fill="#f4d03f" opacity="0.7">
+                        <animate attributeName="cy" values="80;45;80" dur="2.7s" repeatCount="indefinite"/>
+                        <animate attributeName="opacity" values="0.7;1;0.7" dur="2.7s" repeatCount="indefinite"/>
+                    </circle>
+                    <circle cx="40" cy="85" r="1.5" fill="#f4d03f" opacity="0.7">
+                        <animate attributeName="cy" values="85;50;85" dur="3.2s" repeatCount="indefinite"/>
+                        <animate attributeName="opacity" values="0.7;1;0.7" dur="3.2s" repeatCount="indefinite"/>
+                    </circle>
+                    <circle cx="45" cy="75" r="2" fill="#f4d03f" opacity="0.7">
+                        <animate attributeName="cy" values="75;40;75" dur="2.9s" repeatCount="indefinite"/>
+                        <animate attributeName="opacity" values="0.7;1;0.7" dur="2.9s" repeatCount="indefinite"/>
+                    </circle>
+                </g>
+
+                <!-- Clinking sparkles at the center -->
+                <circle cx="200" cy="60" r="3" fill="#f4d03f" opacity="0.8">
+                    <animate attributeName="r" values="3;8;3" dur="1.5s" repeatCount="indefinite"/>
+                    <animate attributeName="opacity" values="0.8;1;0.8" dur="1.5s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="195" cy="55" r="2" fill="#f4d03f" opacity="0.7">
+                    <animate attributeName="r" values="2;6;2" dur="1.8s" repeatCount="indefinite"/>
+                    <animate attributeName="opacity" values="0.7;1;0.7" dur="1.8s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="205" cy="55" r="2" fill="#f4d03f" opacity="0.7">
+                    <animate attributeName="r" values="2;6;2" dur="1.6s" repeatCount="indefinite"/>
+                    <animate attributeName="opacity" values="0.7;1;0.7" dur="1.6s" repeatCount="indefinite"/>
+                </circle>
+            </svg>
+
+            <div class="champagne-overlay"></div>
+        </div>
+
+        <div class="card-inner">
+            <!-- Corner decorations -->
+            <div class="corner-decoration corner-top-left"></div>
+            <div class="corner-decoration corner-top-right"></div>
+            <div class="corner-decoration corner-bottom-left"></div>
+            <div class="corner-decoration corner-bottom-right"></div>
+
+            <!-- Header with main number -->
+            <div class="celebration-header">
+                <div class="subtitle-top">Birthday Celebration</div>
+                <div class="main-number">75</div>
+                <div class="years-text">YEARS</div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- Invitation text -->
+            <div class="invitation-title">You're Invited</div>
+            <div class="invitation-subtitle">
+                Join us in celebrating a remarkable milestone<br>
+                as we honor 75 years of life, love, and laughter
+            </div>
+
+            <!-- Event details -->
+            <div class="event-details">
+                <div class="detail-row">
+                    <div class="detail-icon">👤</div>
+                    <div class="detail-label">In Honor Of</div>
+                    <div class="detail-value">Mr Neerunjun Daboo</div>
+                </div>
+                <div class="detail-row">
+                    <div class="detail-icon">📅</div>
+                    <div class="detail-label">Date</div>
+                    <div class="detail-value">27 December 2025</div>
+                </div>
+                <div class="detail-row">
+                    <div class="detail-icon">🕐</div>
+                    <div class="detail-label">Time</div>
+                    <div class="detail-value">11:00 - 16:00</div>
+                </div>
+                <div class="detail-row">
+                    <div class="detail-icon">📍</div>
+                    <div class="detail-label">Location</div>
+                    <div class="detail-value">
+                        <a href="https://www.google.com/maps/search/?api=1&query=PF57%2BJ9X+Quatre+Bornes" target="_blank" class="location-link">Quatre-Bornes @Kavi & Lauri house</a>
+                        <div class="location-note">Click for map</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RSVP Section -->
+            <div class="rsvp-section">
+                <div class="rsvp-title">Confirm Your Presence</div>
+                <a href="rsvp.html" class="rsvp-button">RSVP Now</a>
+                <p class="rsvp-instruction">Click to confirm your attendance</p>
+            </div>
+        </div>
+
+        <div class="footer-message">
+            We look forward to celebrating this special day with you
+        </div>
+
+        <div class="gold-border-bottom"></div>
+    </div>
+
+    <script>
+        // Create golden sparkles throughout the page
+        const sparklesContainer = document.getElementById('sparklesContainer');
+        const sparkleCount = 50;
+
+        for (let i = 0; i < sparkleCount; i++) {
+            const sparkle = document.createElement('div');
+            sparkle.className = 'sparkle';
+
+            // Random starting position
+            const startX = Math.random() * window.innerWidth;
+            const startY = Math.random() * window.innerHeight;
+
+            // Random movement
+            const moveX = (Math.random() - 0.5) * 200;
+            const moveY = (Math.random() - 0.5) * 200;
+
+            sparkle.style.left = startX + 'px';
+            sparkle.style.top = startY + 'px';
+            sparkle.style.setProperty('--tx', moveX + 'px');
+            sparkle.style.setProperty('--ty', moveY + 'px');
+            sparkle.style.animationDelay = Math.random() * 8 + 's';
+            sparkle.style.animationDuration = (6 + Math.random() * 4) + 's';
+
+            sparklesContainer.appendChild(sparkle);
+        }
+
+        // Create sparkles in the header around champagne glasses
+        const headerSparkles = document.getElementById('headerSparkles');
+        const headerSparkleCount = 30;
+
+        for (let i = 0; i < headerSparkleCount; i++) {
+            const sparkle = document.createElement('div');
+            sparkle.className = 'header-sparkle';
+
+            // Position sparkles around the center where glasses meet
+            const angle = (Math.random() * Math.PI * 2);
+            const distance = 50 + Math.random() * 100;
+            const x = 50 + Math.cos(angle) * distance / 4; // percentage
+            const y = 30 + Math.sin(angle) * distance / 4; // percentage
+
+            sparkle.style.left = x + '%';
+            sparkle.style.top = y + '%';
+            sparkle.style.animationDelay = Math.random() * 2 + 's';
+            sparkle.style.animationDuration = (1.5 + Math.random() * 1) + 's';
+
+            headerSparkles.appendChild(sparkle);
+        }
+    </script>
+</body>
+</html>

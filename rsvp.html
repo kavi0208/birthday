@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSVP - Mr Neerunjun Daboo's 75th Birthday</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&family=Great+Vibes&family=Cinzel:wght@400;500;600;700;800&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: #000000;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        /* Bokeh light effects */
+        .bokeh-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .bokeh {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.4) 0%, rgba(212, 175, 55, 0.1) 40%, transparent 70%);
+            filter: blur(3px);
+            animation: float 20s infinite ease-in-out;
+        }
+
+        .bokeh:nth-child(1) {
+            width: 150px;
+            height: 150px;
+            top: 10%;
+            left: 10%;
+            animation-delay: 0s;
+            animation-duration: 25s;
+        }
+
+        .bokeh:nth-child(2) {
+            width: 200px;
+            height: 200px;
+            top: 60%;
+            right: 15%;
+            animation-delay: 3s;
+            animation-duration: 30s;
+        }
+
+        .bokeh:nth-child(3) {
+            width: 120px;
+            height: 120px;
+            bottom: 15%;
+            left: 20%;
+            animation-delay: 6s;
+            animation-duration: 22s;
+        }
+
+        .bokeh:nth-child(4) {
+            width: 180px;
+            height: 180px;
+            top: 30%;
+            right: 10%;
+            animation-delay: 9s;
+            animation-duration: 28s;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translate(0, 0) scale(1);
+                opacity: 0.3;
+            }
+            25% {
+                transform: translate(30px, -30px) scale(1.1);
+                opacity: 0.5;
+            }
+            50% {
+                transform: translate(-20px, 30px) scale(0.9);
+                opacity: 0.4;
+            }
+            75% {
+                transform: translate(20px, 20px) scale(1.05);
+                opacity: 0.6;
+            }
+        }
+
+        .rsvp-container {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            max-width: 600px;
+            width: 100%;
+            box-shadow:
+                0 0 80px rgba(212, 175, 55, 0.3),
+                0 20px 60px rgba(0, 0, 0, 0.8);
+            overflow: hidden;
+            animation: fadeIn 1s ease-out;
+            position: relative;
+            z-index: 1;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            margin: 20px auto;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .gold-border-top {
+            height: 3px;
+            background: linear-gradient(90deg,
+                transparent 0%,
+                #d4af37 20%,
+                #f4d03f 50%,
+                #d4af37 80%,
+                transparent 100%);
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+        }
+
+        .header {
+            text-align: center;
+            padding: 35px 30px 30px;
+            position: relative;
+        }
+
+        .header-title {
+            font-family: 'Cinzel', serif;
+            font-size: 2.8em;
+            font-weight: 700;
+            background: linear-gradient(135deg, #f4d03f 0%, #d4af37 50%, #c5a028 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 12px;
+            letter-spacing: 4px;
+        }
+
+        .header-subtitle {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9em;
+            color: #888;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-weight: 300;
+        }
+
+        .divider {
+            width: 150px;
+            height: 1px;
+            background: linear-gradient(90deg,
+                transparent 0%,
+                #d4af37 50%,
+                transparent 100%);
+            margin: 30px auto;
+        }
+
+        .form-content {
+            padding: 0 35px 40px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.8em;
+            font-weight: 600;
+            color: #d4af37;
+            margin-bottom: 8px;
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .required {
+            color: #f4d03f;
+            margin-left: 3px;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            background: rgba(0, 0, 0, 0.5);
+            font-size: 0.95em;
+            font-family: 'Montserrat', sans-serif;
+            transition: all 0.3s;
+            color: #ccc;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: #555;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #d4af37;
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+            font-size: 0.9em;
+        }
+
+        .form-group select {
+            cursor: pointer;
+        }
+
+        .attendance-options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        .attendance-option {
+            position: relative;
+        }
+
+        .attendance-option input[type="radio"] {
+            position: absolute;
+            opacity: 0;
+        }
+
+        .attendance-option label {
+            display: block;
+            padding: 16px;
+            background: rgba(0, 0, 0, 0.5);
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 600;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9em;
+            color: #888;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .attendance-option label::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.2), transparent);
+            transition: left 0.6s;
+        }
+
+        .attendance-option input[type="radio"]:checked + label::before {
+            left: 100%;
+        }
+
+        .attendance-option input[type="radio"]:checked + label {
+            background: rgba(212, 175, 55, 0.1);
+            color: #d4af37;
+            border-color: #d4af37;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+        }
+
+        .attendance-option label:hover {
+            border-color: #d4af37;
+            background: rgba(212, 175, 55, 0.05);
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background: transparent;
+            color: #d4af37;
+            border: 2px solid #d4af37;
+            font-size: 0.95em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 25px;
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .submit-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .submit-btn:hover::before {
+            left: 100%;
+        }
+
+        .submit-btn:hover {
+            background: rgba(212, 175, 55, 0.1);
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
+        .submit-btn span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .success-message {
+            display: none;
+            text-align: center;
+            padding: 60px 40px;
+        }
+
+        .success-message.show {
+            display: block;
+        }
+
+        .success-message .icon {
+            font-size: 4em;
+            margin-bottom: 25px;
+            animation: celebration 0.8s ease-out;
+        }
+
+        @keyframes celebration {
+            0% {
+                transform: scale(0) rotate(0deg);
+            }
+            50% {
+                transform: scale(1.3) rotate(180deg);
+            }
+            100% {
+                transform: scale(1) rotate(360deg);
+            }
+        }
+
+        .success-message h2 {
+            font-family: 'Cinzel', serif;
+            background: linear-gradient(135deg, #f4d03f 0%, #d4af37 50%, #c5a028 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 18px;
+            font-size: 2.2em;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .success-message p {
+            font-family: 'Montserrat', sans-serif;
+            color: #888;
+            font-size: 1em;
+            line-height: 1.7;
+            letter-spacing: 0.5px;
+        }
+
+        .success-divider {
+            width: 150px;
+            height: 1px;
+            background: linear-gradient(90deg,
+                transparent 0%,
+                #d4af37 50%,
+                transparent 100%);
+            margin: 30px auto;
+        }
+
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .action-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            border: 2px solid #d4af37;
+            background: rgba(212, 175, 55, 0.1);
+            color: #d4af37;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .action-btn:hover {
+            background: rgba(212, 175, 55, 0.2);
+            border-color: #f4d03f;
+            color: #f4d03f;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(212, 175, 55, 0.3);
+        }
+
+        .action-btn .btn-icon {
+            font-size: 1.2em;
+        }
+
+        .food-count-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        .food-count-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .food-count-item label {
+            display: block;
+            font-size: 0.8em;
+            font-weight: 600;
+            color: #d4af37;
+            margin-bottom: 8px;
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .food-count-item input[type="number"] {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            background: rgba(0, 0, 0, 0.5);
+            font-size: 0.95em;
+            font-family: 'Montserrat', sans-serif;
+            transition: all 0.3s;
+            color: #ccc;
+        }
+
+        .food-count-item input[type="number"]:focus {
+            outline: none;
+            border-color: #d4af37;
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        .food-count-note {
+            margin-top: 10px;
+            font-size: 0.85em;
+            color: #888;
+            font-family: 'Montserrat', sans-serif;
+            font-style: italic;
+        }
+
+        .food-count-note.error {
+            color: #ff6b6b;
+        }
+
+        .form-container.hidden {
+            display: none;
+        }
+
+        /* Surprise Party Animation */
+        .surprise-section {
+            margin-top: 40px;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 1.5s forwards;
+        }
+
+        .surprise-divider {
+            width: 150px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, #d4af37 50%, transparent 100%);
+            margin: 0 auto 30px;
+        }
+
+        .shush-icon {
+            font-size: 4em;
+            animation: pulse 2s ease-in-out infinite;
+            margin-bottom: 15px;
+        }
+
+        .surprise-text {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.5em;
+            color: #d4af37;
+            margin-bottom: 10px;
+            animation: shimmer 2s ease-in-out infinite;
+        }
+
+        .surprise-subtext {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1em;
+            color: #f4d03f;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            animation: blink 1.5s ease-in-out infinite;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        @keyframes shimmer {
+            0%, 100% {
+                text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+            }
+            50% {
+                text-shadow: 0 0 25px rgba(244, 208, 63, 0.8), 0 0 35px rgba(212, 175, 55, 0.6);
+            }
+        }
+
+        @keyframes blink {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.6;
+            }
+        }
+
+        .gold-border-bottom {
+            height: 3px;
+            background: linear-gradient(90deg,
+                transparent 0%,
+                #d4af37 20%,
+                #f4d03f 50%,
+                #d4af37 80%,
+                transparent 100%);
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 30px 25px 25px;
+            }
+
+            .header-title {
+                font-size: 2.2em;
+                letter-spacing: 3px;
+            }
+
+            .header-subtitle {
+                font-size: 0.85em;
+                letter-spacing: 1px;
+            }
+
+            .form-content {
+                padding: 0 25px 35px;
+            }
+
+            .form-group {
+                margin-bottom: 20px;
+            }
+
+            .form-group label {
+                font-size: 0.75em;
+            }
+
+            .form-group input,
+            .form-group textarea,
+            .form-group select {
+                padding: 10px 14px;
+                font-size: 0.9em;
+            }
+
+            .attendance-options {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .attendance-option label {
+                padding: 14px;
+                font-size: 0.85em;
+            }
+
+            .submit-btn {
+                padding: 13px;
+                font-size: 0.9em;
+                letter-spacing: 1.5px;
+            }
+
+            .success-message {
+                padding: 50px 25px;
+            }
+
+            .success-message .icon {
+                font-size: 3.5em;
+            }
+
+            .success-message h2 {
+                font-size: 1.9em;
+            }
+
+            .success-message p {
+                font-size: 0.95em;
+            }
+
+            .action-btn {
+                padding: 10px 20px;
+                font-size: 0.85em;
+            }
+
+            .food-count-row {
+                gap: 15px;
+            }
+
+            .food-count-item input[type="number"] {
+                padding: 10px 14px;
+                font-size: 0.9em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header {
+                padding: 25px 20px 20px;
+            }
+
+            .header-title {
+                font-size: 1.8em;
+                letter-spacing: 2px;
+            }
+
+            .header-subtitle {
+                font-size: 0.8em;
+            }
+
+            .form-content {
+                padding: 0 20px 30px;
+            }
+
+            .form-group {
+                margin-bottom: 18px;
+            }
+
+            .form-group label {
+                font-size: 0.7em;
+                margin-bottom: 6px;
+            }
+
+            .form-group input,
+            .form-group textarea,
+            .form-group select {
+                padding: 9px 12px;
+                font-size: 0.85em;
+            }
+
+            .form-group textarea {
+                min-height: 80px;
+            }
+
+            .attendance-options {
+                gap: 12px;
+            }
+
+            .attendance-option label {
+                padding: 12px;
+                font-size: 0.8em;
+            }
+
+            .submit-btn {
+                padding: 12px;
+                font-size: 0.85em;
+                letter-spacing: 1px;
+                margin-top: 20px;
+            }
+
+            .success-message {
+                padding: 40px 20px;
+            }
+
+            .success-message .icon {
+                font-size: 3em;
+                margin-bottom: 20px;
+            }
+
+            .success-message h2 {
+                font-size: 1.6em;
+                letter-spacing: 1px;
+            }
+
+            .success-message p {
+                font-size: 0.9em;
+                line-height: 1.6;
+            }
+
+            .divider,
+            .success-divider {
+                width: 100px;
+                margin: 20px auto;
+            }
+
+            .action-btn {
+                padding: 10px 18px;
+                font-size: 0.8em;
+            }
+
+            .food-count-row {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .food-count-item input[type="number"] {
+                padding: 9px 12px;
+                font-size: 0.85em;
+            }
+
+            .surprise-section {
+                margin-top: 30px;
+            }
+
+            .shush-icon {
+                font-size: 3em;
+            }
+
+            .surprise-text {
+                font-size: 2em;
+            }
+
+            .surprise-subtext {
+                font-size: 0.9em;
+                letter-spacing: 2px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Bokeh light effects -->
+    <div class="bokeh-container">
+        <div class="bokeh"></div>
+        <div class="bokeh"></div>
+        <div class="bokeh"></div>
+        <div class="bokeh"></div>
+    </div>
+
+    <div class="rsvp-container">
+        <div class="gold-border-top"></div>
+
+        <div class="header">
+            <h1 class="header-title">🥂 RSVP 🥂</h1>
+            <p class="header-subtitle">Please Confirm Your Attendance</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="form-container">
+            <div class="form-content">
+                <form id="rsvpForm">
+                    <div class="form-group">
+                        <label for="name">Your Name<span class="required">*</span></label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Will you be attending?<span class="required">*</span></label>
+                        <div class="attendance-options">
+                            <div class="attendance-option">
+                                <input type="radio" id="attending-yes" name="attending" value="yes" required>
+                                <label for="attending-yes">✓ Yes, I'll be there!</label>
+                            </div>
+                            <div class="attendance-option">
+                                <input type="radio" id="attending-no" name="attending" value="no">
+                                <label for="attending-no">✗ Can't make it</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="attendingSection">
+                        <div class="form-group">
+                            <label for="guests">Number of Guests</label>
+                            <select id="guests" name="guests">
+                                <option value="1">Just me</option>
+                                <option value="2">2 guests</option>
+                                <option value="3">3 guests</option>
+                                <option value="4">4 guests</option>
+                                <option value="5">5+ guests</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group" id="foodPreferenceSection">
+                            <label>Food Preference</label>
+
+                            <!-- For single guest -->
+                            <div class="attendance-options" id="singleGuestFood">
+                                <div class="attendance-option">
+                                    <input type="radio" id="food-veg" name="food" value="vegetarian">
+                                    <label for="food-veg">🥗 Vegetarian</label>
+                                </div>
+                                <div class="attendance-option">
+                                    <input type="radio" id="food-nonveg" name="food" value="non-vegetarian">
+                                    <label for="food-nonveg">🍖 Non-Vegetarian</label>
+                                </div>
+                            </div>
+
+                            <!-- For multiple guests -->
+                            <div id="multipleGuestFood" style="display: none;">
+                                <div class="food-count-row">
+                                    <div class="food-count-item">
+                                        <label for="veg-count">🥗 Vegetarian</label>
+                                        <input type="number" id="veg-count" name="veg-count" min="0" value="0">
+                                    </div>
+                                    <div class="food-count-item">
+                                        <label for="nonveg-count">🍖 Non-Vegetarian</label>
+                                        <input type="number" id="nonveg-count" name="nonveg-count" min="0" value="0">
+                                    </div>
+                                </div>
+                                <div class="food-count-note" id="foodCountNote"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message (Optional)</label>
+                        <textarea id="message" name="message" placeholder="Share a special message or let us know about other dietary restrictions..."></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <span>Confirm RSVP</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="success-message" id="successMessage">
+            <div class="icon" id="successIcon">🥂🎉🥂</div>
+            <h2>Thank You!</h2>
+            <div class="success-divider"></div>
+            <p id="successText">Your RSVP has been received.</p>
+
+            <div class="action-buttons" id="calendarButton">
+                <button onclick="addToCalendar()" class="action-btn calendar-btn">
+                    <span class="btn-icon">📅</span>
+                    <span>Add to Calendar</span>
+                </button>
+            </div>
+
+            <div class="surprise-section" id="surpriseSection">
+                <div class="surprise-divider"></div>
+                <div class="shush-icon">🤫</div>
+                <div class="surprise-text">Sssshhhhh...</div>
+                <div class="surprise-subtext">It's a surprise party!</div>
+            </div>
+        </div>
+
+        <div class="gold-border-bottom"></div>
+    </div>
+
+    <script>
+        // Handle attendance change - show/hide guests and food sections
+        document.querySelectorAll('input[name="attending"]').forEach(function(radio) {
+            radio.addEventListener('change', function() {
+                const attendingSection = document.getElementById('attendingSection');
+                const isAttending = this.value === 'yes';
+
+                if (isAttending) {
+                    attendingSection.style.display = 'block';
+                } else {
+                    attendingSection.style.display = 'none';
+                }
+            });
+        });
+
+        // Handle guest count change to show/hide food preference fields
+        document.getElementById('guests').addEventListener('change', function() {
+            const guestCount = parseInt(this.value);
+            const singleGuestFood = document.getElementById('singleGuestFood');
+            const multipleGuestFood = document.getElementById('multipleGuestFood');
+            const foodCountNote = document.getElementById('foodCountNote');
+
+            if (guestCount === 1) {
+                singleGuestFood.style.display = 'grid';
+                multipleGuestFood.style.display = 'none';
+                // Make single guest radio required
+                document.getElementById('food-veg').required = true;
+                // Clear multiple guest fields
+                document.getElementById('veg-count').value = 0;
+                document.getElementById('nonveg-count').value = 0;
+            } else {
+                singleGuestFood.style.display = 'none';
+                multipleGuestFood.style.display = 'block';
+                // Remove single guest radio required
+                document.getElementById('food-veg').required = false;
+                document.getElementById('food-nonveg').required = false;
+                // Update note
+                foodCountNote.textContent = `Please specify food preference for ${guestCount} guest(s)`;
+                foodCountNote.classList.remove('error');
+            }
+        });
+
+        // Update food count note in real-time
+        function updateFoodCountNote() {
+            const guestCount = parseInt(document.getElementById('guests').value);
+            const vegCount = parseInt(document.getElementById('veg-count').value) || 0;
+            const nonVegCount = parseInt(document.getElementById('nonveg-count').value) || 0;
+            const total = vegCount + nonVegCount;
+            const foodCountNote = document.getElementById('foodCountNote');
+
+            if (total === guestCount) {
+                foodCountNote.textContent = `✓ Total matches ${guestCount} guest(s)`;
+                foodCountNote.classList.remove('error');
+                foodCountNote.style.color = '#d4af37';
+            } else {
+                foodCountNote.textContent = `Total: ${total} / ${guestCount} guest(s)`;
+                foodCountNote.classList.add('error');
+            }
+        }
+
+        // Add event listeners for real-time validation
+        document.getElementById('veg-count').addEventListener('input', updateFoodCountNote);
+        document.getElementById('nonveg-count').addEventListener('input', updateFoodCountNote);
+
+        // Validate food counts for multiple guests (only when attending)
+        function validateFoodCounts() {
+            const attending = document.querySelector('input[name="attending"]:checked').value;
+
+            // Skip validation if not attending
+            if (attending === 'no') {
+                return true;
+            }
+
+            const guestCount = parseInt(document.getElementById('guests').value);
+
+            if (guestCount === 1) {
+                const foodSelected = document.querySelector('input[name="food"]:checked');
+                if (!foodSelected) {
+                    alert('Please select your food preference');
+                    return false;
+                }
+                return true;
+            } else {
+                const vegCount = parseInt(document.getElementById('veg-count').value) || 0;
+                const nonVegCount = parseInt(document.getElementById('nonveg-count').value) || 0;
+                const total = vegCount + nonVegCount;
+
+                if (total !== guestCount) {
+                    alert(`Please ensure food preferences add up to ${guestCount} guest(s). Currently: ${total}`);
+                    return false;
+                }
+                return true;
+            }
+        }
+
+        document.getElementById('rsvpForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Validate food counts (only when attending)
+            if (!validateFoodCounts()) {
+                return;
+            }
+
+            // Get form data
+            const attending = document.querySelector('input[name="attending"]:checked').value;
+            let guestCount = 0;
+            let foodPreference = 'N/A';
+
+            if (attending === 'yes') {
+                guestCount = parseInt(document.getElementById('guests').value);
+
+                if (guestCount === 1) {
+                    foodPreference = document.querySelector('input[name="food"]:checked').value;
+                } else {
+                    const vegCount = parseInt(document.getElementById('veg-count').value) || 0;
+                    const nonVegCount = parseInt(document.getElementById('nonveg-count').value) || 0;
+                    foodPreference = `${vegCount} Vegetarian, ${nonVegCount} Non-Vegetarian`;
+                }
+            }
+
+            const formData = {
+                name: document.getElementById('name').value,
+                phone: document.getElementById('phone').value,
+                attending: attending,
+                guests: attending === 'yes' ? document.getElementById('guests').value : '0',
+                food: foodPreference,
+                message: document.getElementById('message').value,
+                timestamp: new Date().toISOString()
+            };
+
+            // Send to server
+            fetch('save_rsvp.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    console.log('RSVP saved:', data);
+
+                    // Customize success message based on attendance
+                    const attending = formData.attending;
+                    const successIcon = document.getElementById('successIcon');
+                    const successText = document.getElementById('successText');
+                    const calendarButton = document.getElementById('calendarButton');
+
+                    if (attending === 'yes') {
+                        successIcon.textContent = '🥂🎉🥂';
+                        successText.innerHTML = 'Your RSVP has been received.<br>🥂 We look forward to celebrating together! 🥂';
+                        calendarButton.style.display = 'flex';
+                    } else {
+                        successIcon.textContent = '💐';
+                        successText.innerHTML = 'Thank you for letting us know.<br>You will be missed!';
+                        calendarButton.style.display = 'none';
+                    }
+
+                    // Show success message with animation
+                    document.querySelector('.form-container').classList.add('hidden');
+                    document.getElementById('successMessage').classList.add('show');
+                } else {
+                    alert(data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Error submitting RSVP:', error);
+                alert('There was an error submitting your RSVP. Please try again.');
+            });
+        });
+
+        function addToCalendar() {
+            // Event details for calendar
+            const eventTitle = "Mr Neerunjun Daboo's 75th Birthday";
+            const eventLocation = "Quatre-Bornes @Kavi & Lauri house";
+            const eventDescription = "Join us in celebrating Mr Neerunjun Daboo's 75th Birthday! 🥂\\n\\nLocation: https://www.google.com/maps/search/?api=1&query=PF57%2BJ9X+Quatre+Bornes";
+
+            // Event date: 27 Dec 2025, 11:00 AM - 4:00 PM
+            const startDate = new Date('2025-12-27T11:00:00');
+            const endDate = new Date('2025-12-27T16:00:00');
+
+            // Format dates for ICS file (YYYYMMDDTHHMMSS)
+            const formatDate = (date) => {
+                const year = date.getFullYear();
+                const month = String(date.getMonth() + 1).padStart(2, '0');
+                const day = String(date.getDate()).padStart(2, '0');
+                const hours = String(date.getHours()).padStart(2, '0');
+                const minutes = String(date.getMinutes()).padStart(2, '0');
+                const seconds = String(date.getSeconds()).padStart(2, '0');
+                return `${year}${month}${day}T${hours}${minutes}${seconds}`;
+            };
+
+            // Create ICS file content
+            const icsContent = `BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Birthday Celebration//EN
+BEGIN:VEVENT
+UID:${Date.now()}@birthday
+DTSTAMP:${formatDate(new Date())}
+DTSTART:${formatDate(startDate)}
+DTEND:${formatDate(endDate)}
+SUMMARY:${eventTitle}
+DESCRIPTION:${eventDescription}
+LOCATION:${eventLocation}
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR`;
+
+            // Create blob and download
+            const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
+            const link = document.createElement('a');
+            link.href = window.URL.createObjectURL(blob);
+            link.download = 'birthday-celebration.ics';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+</html>
